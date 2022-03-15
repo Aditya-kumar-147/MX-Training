@@ -1,0 +1,39 @@
+<html>
+    <head>
+       <title> Bank App </title>
+    </head>
+    <body>
+        <center><h2>Bank app - Create account, Deposit amount, Withdraw amount</h2></center>
+        <p id="demo"></p>
+        <script>
+            class bankingapp{
+                constructor(customer,balance){
+                    this.customer = customer;
+                    this.balance = balance;
+                }
+                checkBalance(){
+                    return this.balance;
+                }
+                userdetails(){
+                    return this.customer;
+                }
+                depositAmount(dep_amount){
+                    return this.balance + dep_amount;
+                }
+                withdrawAmount(wit_amount){
+                    return this.balance - wit_amount;
+                }
+            }
+            let dep_amount = 5000;
+            let wit_amount = 1000;
+            let createaccount = new bankingapp("Aditya",10000);
+            document.getElementById("demo").innerHTML ="Account created for " + createaccount.userdetails() + " with balance Rs."+ createaccount.checkBalance();
+            document.write('<br />');
+            document.write('After Amount Deposit balance: Rs.'+createaccount.depositAmount(dep_amount));
+            document.write('<br />');
+            document.write("After withdrawl of Rs."+wit_amount+"balance is: Rs."+createaccount.withdrawAmount(wit_amount));
+
+        </script>
+
+    </body>
+</html>

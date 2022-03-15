@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Add odd values</title>
+    </head>
+    <body>
+        <center><h2>Task1 - Loop till 20 and append only odd values in the array, and print the array</h2></center>
+        <script>
+            const arr = [];
+            for(let i=1;i<=20;i++)
+            {
+                if(i % 2 != 0)
+                {
+                    arr.push(i);
+                }
+            }
+            document.write("The array is: ");
+            for(let i=0;i<arr.length;i++)
+            {
+                document.write(arr[i]+" ");
+            }
+        </script>
+    </body>
+</html>

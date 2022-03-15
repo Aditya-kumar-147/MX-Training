@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Todo list</title>
+    </head>
+    <body>
+        <center><h2>Remove i task from the array, i is the position parameter.</h2></center>
+        <script>
+            var x;
+            function func(x) {
+                var arr = ['Complete HW','Complete workout','Complete testing','Complete deployment','Complete series'];
+                for (var i = 0; i < arr.length; i++) {
+                    if (arr[i] == arr[x]) {
+                        var spliced = arr.splice(i, 1);
+                        document.write("Removed element is: " + spliced + "<br>");
+                        document.write("After removing the element: " + arr);
+                    }
+                }
+            }
+            func(2);
+            </script> 
+    </body>
+</html>
